@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#E9EDF3"><link rel="icon" href="icon.png"><link rel="apple-touch-icon" href="icon.png">
+<title>와이파이 날씨 — 시험판</title>
+<meta name="description" content="우리 집 와이파이 상태를 날씨처럼 보여 주고, 방마다 재서 약한 방과 공유기 둘 자리를 알려 주는 앱(시험판)">
+<style>
+:root{--bg:#E9EDF3;--tx:#232A38;--mu:#566176;--pri:#2F5BEA;--d:rgba(163,177,198,.75);--l:rgba(255,255,255,.95)}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background-color:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;display:flex;justify-content:center;padding:32px 16px 48px}
+main{width:100%;max-width:440px;display:flex;flex-direction:column;gap:18px}
+.head{display:flex;align-items:center;gap:16px}.head img{width:68px;height:68px;border-radius:18px}
+h1{margin:0;font-size:24px;letter-spacing:-.03em}.sub{margin:4px 0 0;color:var(--mu);font-size:14px;line-height:1.55}
+.lead{margin:0;font-size:15px;line-height:1.6}
+.card{background-color:var(--bg);border-radius:24px;padding:18px 20px;box-shadow:6px 6px 14px var(--d),-6px -6px 14px var(--l)}
+.btn{display:flex;flex-direction:column;align-items:center;gap:4px;padding:16px;border-radius:99px;text-decoration:none}
+.get{color:#fff;background-image:linear-gradient(135deg,#2F5BEA,#3B8CFF);box-shadow:0 6px 14px rgba(47,91,234,.35),-4px -4px 10px var(--l)}
+.see{color:var(--pri);background-color:var(--bg);box-shadow:3px 3px 7px var(--d),-3px -3px 7px var(--l)}
+.btn b{font-size:17px}.btn span{font-size:13px;opacity:.85}
+.who{margin:-6px 0 0;text-align:center;font-size:13px;color:var(--mu)}
+.note{margin:0;padding:12px 16px;border-radius:18px;background-color:#FBEED2;color:#5C3E00;font-size:13px;line-height:1.55}
+h2{margin:0 0 10px;font-size:15px}
+ol,ul{margin:0;padding-left:20px;font-size:14px;line-height:1.7}li+li{margin-top:2px}
+p.t{margin:0;font-size:14px;line-height:1.65}
+.foot{text-align:center;font-size:12px;color:var(--mu)}
+</style></head><body><main>
+<div class="head"><img src="icon.png" alt=""><div><h1>와이파이 날씨</h1><p class="sub">시험판 0.59 · 10월 31일</p></div></div>
+<p class="lead">우리 집 와이파이 상태를 날씨처럼 보여 주고, 방마다 재서 약한 방과 공유기 둘 자리를 알려 주는 앱이에요.</p>
+<a class="btn get" href="wifi-weather-0.59.apk" download><b>안드로이드 앱 받기</b><span>0.59 · 7.5M</span></a>
+<a class="btn see" href="preview/"><b>아이폰·PC 는 미리 보기</b><span>화면만 둘러보기 — 견본 값</span></a>
+<p class="who">실제로 재는 건 안드로이드 앱만 돼요. 아이폰은 애플이 와이파이 신호 세기를 앱에 주지 않아서 아직 못 만들었어요.</p>
+<p class="note">회사 와이파이에서는 이 페이지나 받기가 막힐 수 있어요. <b>폰 데이터(LTE)나 집 와이파이</b>로 받아 주세요.
+앱은 지금 붙은 와이파이를 재니 <b>집에서</b> 써 주세요.</p>
+<div class="card"><h2>안드로이드 설치</h2><ol>
+<li>[안드로이드 앱 받기] → 받은 파일 열기</li>
+<li>"출처를 알 수 없는 앱" 안내가 나오면 <b>설정 → 이 출처 허용</b> 켜고 뒤로</li>
+<li>설치 → 열기 (새 판이 나오면 여기서 다시 받아 덮어 깔면 돼요 — 기록은 그대로)</li></ol></div>
+<div class="card"><h2>처음 열면</h2><ul>
+<li><b>위치 권한</b> — 안드로이드는 와이파이 이름·옆집 공유기를 보려면 위치 권한이 필요해요. 위치는 저장하거나 보내지 않아요.</li>
+<li><b>하루 기록</b>을 켜면 알림 권한을 물어요. 앱을 꺼도 1분마다 재서 언제 느려졌는지 남겨요. 안 켜도 돼요.</li></ul></div>
+<div class="card"><h2>써 보는 순서</h2><ol>
+<li><b>날씨</b> 탭 — 지금 우리 집 와이파이 상태</li>
+<li><b>우리집</b> 탭 → <b>배치 만들기</b> — 방·욕실·주방·현관을 대충 우리 집처럼 (<a href="layout-guide.png">어플 사용 방법</a>)</li>
+<li>방마다 폰 쓰는 자리에서 <b>여기서 재기</b> — 세 번 재면 더 정확해요</li>
+<li><b>공유기 자리</b>를 찍으면 옮길 자리·중계기 자리를 알려 줘요</li></ol></div>
+<div class="card"><h2>개인정보</h2><p class="t">기록은 모두 폰 안에만 남아요(앱을 지우면 같이 지워져요). 밖으로 나가는 건 공유기와 구글 DNS(8.8.8.8)로 보내는 응답 확인(핑), 그리고 하루 한 번 이 사이트에서 새 판 번호를 읽는 것뿐이에요(보내는 정보는 없어요).
+의견을 보낼 때만 직접 쓴 글과 기기 정보(안드로이드 버전·잰 방 수)가 나가요.</p></div>
+<div class="card"><h2>의견 보내기</h2><p class="t" style="margin-bottom:12px">앱 <b>자세히</b> 탭 맨 아래 <b>의견 보내기</b>, 또는 아래 메일로 보내 주세요. 미리 보기만 하신 분도 환영이에요.</p>
+<a class="btn see" href="mailto:jhgen77@gmail.com"><b>메일로 의견 보내기</b><span>jhgen77@gmail.com</span></a></div>
+<p class="foot">와이파이 날씨 0.59</p>
+</main></body></html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#E9EDF3">
+  <title>와이파이 날씨</title>
+  <script type="module" crossorigin src="./assets/index-tPE5hm5i.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-UWW7jpvU.css">
+</head>
+<body>
+  <div class="sbar" id="sbar" aria-hidden="true"></div>
+  <div class="bfade" aria-hidden="true"></div>
+  <div id="app">
+    <header class="top"><b>우리집 와이파이</b><span id="ssid"></span></header>
+
+    <main>
+      <section id="tab-weather" class="tab">
+        <div class="banner" id="perm" hidden></div>
+        <div class="banner info" id="update" hidden></div>
+        <div class="card hero" id="hero">
+          <div id="sky-art" class="sky-art" aria-hidden="true"></div>
+          <p class="sub small">지금 이 자리 · 실시간</p>
+          <p class="big" id="sky-title">재는 중</p>
+          <p class="sub" id="sky-sub">잠깐만 기다려 주세요</p>
+          <div class="pills" id="pills"></div>
+        </div>
+        <div class="card tips" id="tips" hidden></div>
+        <div class="card">
+          <div class="head"><div class="day"><button id="day-prev" aria-label="전날">‹</button><b id="day-title">오늘</b><button id="day-next" aria-label="다음 날" disabled>›</button></div><span id="today-says"></span></div>
+          <div class="hours" id="hours"></div>
+          <div class="hour-det" id="hour-det" hidden></div>
+          <p class="outages" id="outages" hidden></p>
+        </div>
+        <div class="card" id="rec-card" hidden></div>
+        <p class="hint" id="weather-hint"></p>
+      </section>
+
+      <section id="tab-home" class="tab" hidden>
+        <div class="card">
+          <div class="head"><b>우리집</b><span id="plan-name"></span></div>
+          <div id="plan"></div>
+          <div class="det" id="det"></div>
+        </div>
+        <div class="card" id="router-card"></div>
+        <p class="hint" id="compare"></p>
+      </section>
+
+      <section id="tab-log" class="tab" hidden>
+        <div class="card">
+          <div class="head"><b>지금 숫자</b></div>
+          <dl class="rows" id="now-rows"></dl>
+        </div>
+        <div class="card">
+          <div class="head"><b>잰 방</b></div>
+          <dl class="rows" id="room-rows"></dl>
+        </div>
+        <div class="card">
+          <div class="head"><b>의견 보내기</b><span>불편한 점·바라는 점</span></div>
+          <textarea id="fb-text" rows="4" placeholder="저녁마다 안방에서 끊겨요. 앱에서는 좋음으로 나와요."></textarea>
+          <button class="pri" id="fb-send">메일로 보내기</button>
+          <p class="fb-done" id="fb-done" hidden>메일 앱이 없어 글을 복사했어요. jhgen77@gmail.com 으로 붙여넣어 보내 주세요.</p>
+          <p class="foot">받는 곳 : jhgen77@gmail.com<br>의견 보낼 때, 기기 정보(안드로이드 버전 / 만든 평면도 구조, 잰 방 수)가 함께 보내집니다. (와이파이 이름은 제외)</p>
+        </div>
+        <button class="ghost" id="clear">기록 모두 지우기</button>
+        <p class="ver" id="ver"></p>
+      </section>
+    </main>
+
+    <nav class="nav"><span class="knob" aria-hidden="true"></span>
+      <button data-tab="weather" class="on"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3.5"/><path d="M9 2.5V4M2.5 9H4M4.4 4.4l1 1M13.6 4.4l-1 1"/><path d="M8 20.5h9a3.6 3.6 0 0 0 .4-7.2 5 5 0 0 0-9.6 1.5A2.9 2.9 0 0 0 8 20.5z" fill="var(--bg)"/></svg>날씨</button>
+      <button data-tab="home"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5h-5v5H5a1 1 0 0 1-1-1z"/></svg>우리집</button>
+      <button data-tab="log"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 20v-6M12 20V5M18 20v-9"/></svg>자세히</button>
+    </nav>
+  </div>
+</body>
+</html>
